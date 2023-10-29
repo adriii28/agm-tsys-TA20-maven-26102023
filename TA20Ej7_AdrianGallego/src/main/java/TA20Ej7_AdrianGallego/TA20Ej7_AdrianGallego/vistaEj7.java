@@ -16,6 +16,7 @@ public class vistaEj7 {
 	private JTextField tfIntroducir;
 	private JTextField tfResultado;
 	private JButton btnCambiar, btnConvertir;
+	private JButton btnBorrar;
 	private int cambio = 1;
 
 	public vistaEj7() {
@@ -70,6 +71,15 @@ public class vistaEj7 {
 		frame.getContentPane().add(btnBorrar);
 	}
 	
+	/**
+	 * 
+	 * Este metodo funciona segun la variable cambio.
+	 * 
+	 * La variable cambio funciona de la siguiente manera; si es 1 se ejecutara el codigo
+	 * para pasar de euros a pesetas, y si la variable cambio es 2 se ejecutara el codigo que pasara de pesetas a euros
+	 * 
+	 * */
+	
 	ActionListener alConvertir = new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			if (!tfIntroducir.getText().isEmpty()) {
@@ -94,11 +104,25 @@ public class vistaEj7 {
 		}
 	};
 
+	/**
+	 * 
+	 * En presionar el boton Borrar, llama al metodo clean()
+	 * 
+	 * */
+	
 	ActionListener delete = new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			clean();
 		}
 	};
+	
+	/**
+	 * 
+	 * En presionar el boton de Cambiar, se ejecutara este ActionListener, que cambia el texto de un boton
+	 * y la variable cambio.
+	 * 
+	 * 
+	 * */
 	
 	ActionListener btnChange = new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
@@ -114,19 +138,40 @@ public class vistaEj7 {
 			}
 		}
 	};
-	private JButton btnBorrar;
+	
+	/**
+	 * 
+	 * Metodo que hace el calculo de euros a pesetas
+	 * 
+	 * @param euros La cantidad de euros a convertir
+	 * 
+	 * */
 	
 	private String calcularPtas(Double euros) {
 		Double resultado = euros*166.368;
 		resultado = Math.round(resultado * 100.0) / 100.0;
 		return String.valueOf(resultado);
 	}
+	
+	/**
+	 * 
+	 * Metodo que hace el calculo de pesetas a euros
+	 * 
+	 * @param pesetas La cantidad de pesetas a convertir
+	 * 
+	 * */
 
 	private String calcularEuros(Double pesetas) {
 		Double resultado = pesetas/166.368;
 		resultado = Math.round(resultado * 100.0) / 100.0;
 		return String.valueOf(resultado);
 	}
+	
+	/**
+	 * 
+	 * Metodo que limpia los TextField
+	 * 
+	 * */
 	
 	private void clean() {
 		tfIntroducir.setText("");
