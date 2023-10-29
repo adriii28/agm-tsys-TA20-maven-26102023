@@ -24,6 +24,8 @@ public class vistaEj3 {
 		frame.setBounds(100, 100, 450, 250);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null);
+		frame.setTitle("Contador botones");
 
 		lblBtn1 = new JLabel("Boton 1: 0 veces");
 		lblBtn1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -51,6 +53,13 @@ public class vistaEj3 {
 		
 
 	}
+	
+	/**
+	 * 
+	 * En este metodo hay un contador para cada boton que cuenta el numero de veces que
+	 * se ha pulsado el boton
+	 * 
+	 * */
 	
 	ActionListener btn = new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
