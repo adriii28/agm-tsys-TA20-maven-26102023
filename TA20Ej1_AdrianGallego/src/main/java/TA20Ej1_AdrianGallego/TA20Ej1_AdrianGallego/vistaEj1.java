@@ -18,12 +18,11 @@ public class vistaEj1 {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Ventana");
+		frame.setLocationRelativeTo(null);
 
 		JLabel lblNewLabel = new JLabel("Puedes cambiar el tamaño de la ventana");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		frame.getContentPane().add(lblNewLabel, BorderLayout.CENTER);
-		
-
 	}
 
 }
