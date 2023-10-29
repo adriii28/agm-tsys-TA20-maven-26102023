@@ -59,13 +59,20 @@ public class vistaEj6 {
 		frame.getContentPane().add(btnCalcular);
 		
 		tfResultado = new JTextField();
+		tfResultado.setEditable(false);
 		tfResultado.setFont(new Font("Tahoma", Font.BOLD, 14));
-		tfResultado.setEnabled(false);
 		tfResultado.setColumns(10);
 		tfResultado.setBounds(265, 121, 80, 30);
 		frame.getContentPane().add(tfResultado);
 		
 	}
+	
+	/**
+	 * 
+	 * Metodo que comprueba que los campos introducidos sean correctos e introduce
+	 * el IMC en el TextField
+	 * 
+	 * */
 	
 	ActionListener al = new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
@@ -77,6 +84,15 @@ public class vistaEj6 {
 		}
 
 	};
+	
+	/**
+	 * 
+	 * Metodo que calcula el IMC
+	 * 
+	 * @param altura Altura del usuario
+	 * @param peso Peso del usuario
+	 * 
+	 * */
 	
 	private String calcularIMC(Double altura, Double peso) {
 		Double resultado = peso / (Math.pow(altura, 2));
