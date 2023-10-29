@@ -26,6 +26,7 @@ public class vistaEj5 {
 		frame.setBounds(100, 100, 550, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
+		frame.setTitle("Mouse Listener");
 		frame.getContentPane().setLayout(null);
 		
 		limpiarBtn = new JButton("Limpiar");
@@ -41,6 +42,12 @@ public class vistaEj5 {
 		frame.getContentPane().add(textArea);
 
 	}
+	
+	/**
+	 * 
+	 * Metodo que limpia el textArea
+	 * 
+	 * */
 	
 	ActionListener al = new ActionListener() {
 		@Override
