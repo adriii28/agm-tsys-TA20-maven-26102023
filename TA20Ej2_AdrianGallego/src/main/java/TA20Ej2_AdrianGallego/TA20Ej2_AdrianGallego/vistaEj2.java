@@ -49,6 +49,13 @@ public class vistaEj2 {
 
 	}
 	
+	/**
+	 * 
+	 * Captura el evento y lo almacena en una variable tipo boton, de esta manera 
+	 * guardamos el boton pulsado en una variable y es un metodo reutilizable, no haria
+	 * falta crear un ActionListener por cada boton
+	 * 
+	 * */
 	ActionListener btn = new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			JButton btn = (JButton) e.getSource();
