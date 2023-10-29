@@ -1,10 +1,9 @@
 package TA20Ej4_AdrianGallego.TA20Ej4_AdrianGallego;
 
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
-import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.SwingConstants;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
 
 public class vistaEj4 {
 
@@ -27,10 +26,10 @@ public class vistaEj4 {
 		frame.getContentPane().add(textArea);
 		
 		JLabel lblNewLabel = new JLabel("Eventos");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblNewLabel.setBounds(21, 157, 70, 20);
 		frame.getContentPane().add(lblNewLabel);
 
 	}
+
 }
